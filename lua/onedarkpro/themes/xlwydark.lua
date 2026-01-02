@@ -4,7 +4,7 @@ local meta = {
 }
 
 local default_colors = {
-  bg = "#1F2329",
+  bg = "#1f2329",
   fg = "#abb2bf",
   red = "#e06c75",
   orange = "#d19a66",
@@ -20,21 +20,20 @@ local default_colors = {
   comment = "#7f848e",
   none = "NONE",
   -- xlwy colors
-  Xoperator = "#4FC3F7",        -- 运算符和点
-  Xstring = "#8BC34A",          -- 字符串
-  Xfloat = "#89C049",           -- 浮点数
-  Xboolean = "#FF6060",         -- Boolean
-  Xinteger = "#8BC34A",         -- 整数
-  Xbracket = "#E8E1DD",         -- 括号
-  Xcomment = "#BDBDBD",         -- 注释
-  Xkeyword = "#FF6060",         -- 关键字
-  Xannotation = "#AFB42B",      -- 注解
-  Xfunction = "#64B5F6",        -- 函数名和类型
-  Xparameter = "#BA68C8",       -- 参数
-  Xvariable = "#E667CB",        -- 变量
-  Xfield = "#F0BE4B",           -- 字段
-  Xborder = "#61afef",          -- 蓝色边框
-
+  Xoperator = "#4fc3f7",        -- 运算符
+  Xstring = "#8bc34a",          -- 字符串
+  Xfloat = "#89c049",           -- 浮点数
+  Xboolean = "#ff6060",         -- Boolean
+  Xinteger = "#8bc34a",         -- 整数
+  Xbracket = "#e8e1dd",         -- 基础符号
+  Xcomment = "#bdbdbd",         -- 注释
+  Xkeyword = "#ff6060",         -- 关键字
+  Xannotation = "#afb42b",      -- 注解
+  Xfunction = "#64b5f6",        -- 函数名和类型
+  Xparameter = "#ba68c8",       -- 参数
+  Xvariable = "#e667cb",        -- 变量
+  Xfield = "#f0be4b",           -- 字段
+  Xborder = "#61afef",          -- 蓝色
 }
 
 ---Colors which are generated depending on the values in the palette
