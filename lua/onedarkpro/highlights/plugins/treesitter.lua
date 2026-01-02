@@ -10,28 +10,28 @@ function M.groups(theme)
   -- https://github.com/nvim-treesitter/nvim-treesitter/blob/master/CONTRIBUTING.md#highlights
   return {
     -- Identifiers
-    ["@variable"] = { fg = theme.palette.red, style = config.styles.variables }, -- various variable names
-    ["@variable.builtin"] = { fg = theme.palette.yellow }, -- built-in variable names (e.g. `this`)
-    ["@variable.parameter"] = { fg = theme.palette.red, style = config.styles.parameters }, -- parameters of a function
-    ["@variable.member"] = { fg = theme.palette.red }, -- object and struct fields
+    ["@variable"] = { fg = theme.palette.Xvariable, style = config.styles.variables }, -- various variable names
+    ["@variable.builtin"] = { fg = theme.palette.Xvariable }, -- built-in variable names (e.g. `this`)
+    ["@variable.parameter"] = { fg = theme.palette.Xparameter, style = config.styles.parameters }, -- parameters of a function
+    ["@variable.member"] = { fg = theme.palette.Xfield }, -- object and struct fields
 
-    ["@constant"] = { fg = theme.palette.orange, style = config.styles.constants }, -- constant identifiers
-    ["@constant.builtin"] = { fg = theme.palette.purple, style = config.styles.constants }, -- built-in constant values
+    ["@constant"] = { fg = theme.palette.Xvariable, style = config.styles.constants }, -- constant identifiers
+    ["@constant.builtin"] = { fg = theme.palette.Xvariable, style = config.styles.constants }, -- built-in constant values
     ["@constant.macro"] = { link = "@constant" }, -- constants defined by the preprocessor
 
-    ["@module"] = { fg = theme.palette.yellow }, -- modules or namespaces
+    ["@module"] = { fg = theme.palette.Xvariable }, -- modules or namespaces
     ["@label"] = { link = "Label" }, -- GOTO and other labels (e.g. `label:` in C)
 
     -- Literals
-    ["@string"] = { fg = theme.palette.green, style = config.styles.strings }, -- string literals
-    ["@string.regex"] = { fg = theme.palette.green, style = config.styles.strings }, -- regular expressions
-    ["@string.escape"] = { fg = theme.palette.cyan, style = config.styles.strings }, -- escape sequences
+    ["@string"] = { fg = theme.palette.Xstring, style = config.styles.strings }, -- string literals
+    ["@string.regex"] = { fg = theme.palette.Xstring, style = config.styles.strings }, -- regular expressions
+    ["@string.escape"] = { fg = theme.palette.Xborder, style = config.styles.strings }, -- escape sequences
     ["@string.special"] = { link = "Special" }, -- other special strings (e.g. dates)
-    ["@string.special.symbol"] = { fg = theme.palette.red }, -- symbols or atoms
-    ["@string.special.url"] = { fg = theme.palette.blue, italic = true, underline = true }, -- URIs (e.g. hyperlinks)
+    ["@string.special.symbol"] = { fg = theme.palette.Xstring }, -- symbols or atoms
+    ["@string.special.url"] = { fg = theme.palette.Xstring, italic = true, underline = true }, -- URIs (e.g. hyperlinks)
 
     ["@character"] = { link = "Character" }, -- character literals
-    ["@character.special"] = { fg = theme.palette.purple }, -- special characters (e.g. wildcards)
+    ["@character.special"] = { fg = theme.palette.Xborder }, -- special characters (e.g. wildcards)
 
     ["@boolean"] = { link = "Boolean" }, -- boolean literals
     ["@number"] = { link = "Number" }, -- numeric literals
@@ -43,36 +43,36 @@ function M.groups(theme)
     ["@type.definition"] = { link = "@type" }, -- type definitions (e.g. `typedef` in C)
     ["@type.qualifier"] = { link = "@type" }, -- type qualifiers (e.g. `const`)
 
-    ["@attribute"] = { fg = theme.palette.purple }, --attribute annotations (e.g. Python decorators)
-    ["@property"] = { fg = theme.palette.red }, -- similar to `@field`
+    ["@attribute"] = { fg = theme.palette.Xannotation }, --attribute annotations (e.g. Python decorators)
+    ["@property"] = { fg = theme.palette.xparameter }, -- similar to `@field`
 
     -- Functions
-    ["@function"] = { fg = theme.palette.blue, style = config.styles.functions }, -- function definitions
-    ["@function.builtin"] = { fg = theme.palette.yellow }, -- built-in functions
+    ["@function"] = { fg = theme.palette.Xfunction, style = config.styles.functions }, -- function definitions
+    ["@function.builtin"] = { fg = theme.palette.Xfunction }, -- built-in functions
     ["@function.call"] = { link = "@function" }, -- function calls
-    ["@function.macro"] = { fg = theme.palette.blue }, -- preprocessor macros
+    ["@function.macro"] = { fg = theme.palette.Xfunction }, -- preprocessor macros
 
-    ["@function.method"] = { fg = theme.palette.blue, style = config.styles.methods }, -- method definitions
+    ["@function.method"] = { fg = theme.palette.Xfunction, style = config.styles.methods }, -- method definitions
     ["@function.method.call"] = { link = "@function.method" }, -- method calls
 
-    ["@constructor"] = { fg = theme.palette.yellow }, -- constructor calls and definitions
-    ["@operator"] = { fg = theme.palette.cyan, style = config.styles.operators }, -- symbolic operators (e.g. `+` / `*`)
+    ["@constructor"] = { fg = theme.palette.Xfunction }, -- constructor calls and definitions
+    ["@operator"] = { fg = theme.palette.Xoperator, style = config.styles.operators }, -- symbolic operators (e.g. `+` / `*`)
 
     -- Keywords
     ["@keyword"] = { link = "Keyword" }, -- For keywords that don't fall in previous categories.
-    ["@keyword.function"] = { fg = theme.palette.purple, style = config.styles.functions }, -- For keywords used to define a function.
-    ["@keyword.operator"] = { fg = theme.palette.purple, style = config.styles.operators }, -- For operators that are English words, e.g. `and`, `as`, `or`.
+    ["@keyword.function"] = { fg = theme.palette.Xkeyword, style = config.styles.functions }, -- For keywords used to define a function.
+    ["@keyword.operator"] = { fg = theme.palette.Xoperator, style = config.styles.operators }, -- For operators that are English words, e.g. `and`, `as`, `or`.
     ["@keyword.import"] = { link = "@keyword" }, -- keywords for including modules (e.g. `import` / `from` in Python)
     ["@keyword.repeat"] = { link = "@keyword" }, -- keywords related to loops (e.g. `for` / `while`)
     ["@keyword.return"] = { link = "@keyword" }, -- for the `return` and `yield` keywords.
     ["@keyword.exception"] = { link = "@keyword" }, -- keywords related to exceptions (e.g. `throw` / `catch`)
 
-    ["@keyword.conditional"] = { fg = theme.palette.purple, style = config.styles.conditionals }, -- keywords related to conditionals (e.g. `if` / `else`)
+    ["@keyword.conditional"] = { fg = theme.palette.Xkeyword, style = config.styles.conditionals }, -- keywords related to conditionals (e.g. `if` / `else`)
 
     -- Punctuation
     ["@punctuation.delimiter"] = { link = "Delimiter" }, -- delimiters (e.g. `;` / `.` / `,`)
-    ["@punctuation.bracket"] = { fg = theme.palette.purple }, -- brackets (e.g. `()` / `{}` / `[]`)
-    ["@punctuation.special"] = { fg = theme.palette.fg }, -- special symbols (e.g. `{}` in string interpolation)
+    ["@punctuation.bracket"] = { fg = theme.palette.Xbracket }, -- brackets (e.g. `()` / `{}` / `[]`)
+    ["@punctuation.special"] = { fg = theme.paletteXborder }, -- special symbols (e.g. `{}` in string interpolation)
 
     -- Comments
     ["@comment"] = { link = "Comment" }, -- line and block comments
