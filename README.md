@@ -1,2 +1,2 @@
 onedarkpro.nvim (Personal use)
-onedarkpro.nvim(自制 个用)
+onedarkpro.nvim (自制 个用)
