@@ -1,92 +1,39 @@
-local meta = {
-  name = "onedark",
-  background = "dark",
+local colors = require("onedarkpro.helpers").get_colors("onedark")
+local config = require("onedarkpro.config")
+
+local onedarkpro = {}
+
+onedarkpro.normal = {
+  a = { bg = colors.green, fg = colors.bg },
+  b = { bg = colors.fg_gutter, fg = colors.green },
+  c = { bg = config.options.lualine_transparency and colors.none or colors.bg_statusline, fg = colors.fg },
 }
 
-local default_colors = {
-  bg = "#1F2329",
-  fg = "#abb2bf",
-  red = "#e06c75",
-  orange = "#d19a66",
-  yellow = "#e5c07b",
-  green = "#98c379",
-  cyan = "#56b6c2",
-  blue = "#61afef",
-  purple = "#c678dd",
-  white = "#abb2bf",
-  black = "#282c34",
-  gray = "#5c6370",
-  highlight = "#e2be7d",
-  comment = "#7f848e",
-  none = "NONE",
-  --xlwy colors
-  Xoperator = "#4FC3F7",        -- 运算符和点
-  Xstring = "#8BC34A",          -- 字符串
-  Xfloat = "#89C049",           -- 浮点数
-  Xboolean = "#FF6060",         -- Boolean
-  Xinteger = "#8BC34A",         -- 整数
-  Xbracket = "#E8E1DD",         -- 括号
-  Xcomment = "#BDBDBD",         -- 注释
-  Xkeyword = "#FF6060",         -- 关键字
-  Xannotation = "#AFB42B",      -- 注解
-  Xfunction = "#64B5F6",        -- 函数名和类型
-  Xparameter = "#BA68C8",       -- 参数
-  Xvariable = "#E667CB",        -- 变量
-  Xfield = "#F0BE4B",           -- 字段
-  Xborder = "#61afef",          -- 蓝色边框
-
+onedarkpro.insert = {
+  a = { bg = colors.blue, fg = colors.bg },
+  b = { bg = colors.fg_gutter, fg = colors.blue },
 }
 
----Colors which are generated depending on the values in the palette
----@param colors table the theme's color palette
----@return table
-local function generate(colors)
-  local color = require("onedarkpro.helpers")
-
-  return {
-    cursorline = colors.cursorline or "#2d313b",
-    color_column = colors.color_column or "#2d313b",
-    fold = colors.fold or "#30333d",
-    line_number = colors.line_number or "#495162",
-    indentline = colors.indentline or "#3b4048",
-    selection = colors.selection or "#414858",
-    float_bg = colors.float_bg or color.darken(colors.bg, 3),
-    inlay_hint = colors.inlay_hint or color.darken(colors.gray, 7),
-
-    -- Git colors
-    git_add = colors.git_add or "#109868",
-    git_change = colors.git_change or "#948B60",
-    git_delete = colors.git_delete or "#9a353d",
-
-    git_hunk_add = colors.git_hunk_add or "#43554d",
-    git_hunk_delete = colors.git_hunk_delete or "#502d30",
-    git_hunk_add_inline = colors.git_hunk_add_inline or "#3f534f",
-    git_hunk_change_inline = colors.git_hunk_change_inline or "#41483d",
-    git_hunk_delete_inline = colors.git_hunk_delete_inline or "#6f2e2d",
-
-    -- Git diff
-    diff_add = colors.diff_add or "#003e4a",
-    diff_change = colors.diff_change or "#1f4662",
-    diff_delete = colors.diff_delete or "#501b20",
-    diff_text = colors.diff_text or "#005869",
-
-    -- Lualine colors
-    bg_statusline = colors.bg_statusline or color.darken(colors.bg, 2.5),
-    fg_gutter = colors.fg_gutter or color.lighten(colors.bg, 9.6),
-    fg_gutter_inactive = colors.fg_gutter_inactive or colors.fg,
-
-    -- Virtual text
-    virtual_text_error = colors.virtual_text_error or color.lighten(colors.red, 9.3),
-    virtual_text_warning = colors.virtual_text_warning or color.lighten(colors.yellow, 9),
-    virtual_text_information = colors.virtual_text_information or color.lighten(colors.blue, 10.2),
-    virtual_text_hint = colors.virtual_text_hint or color.lighten(colors.cyan, 10.8),
-  }
-end
-
-return {
-  meta = meta,
-  palette = default_colors,
-  generated = function()
-    return generate(default_colors)
-  end,
+onedarkpro.command = {
+  a = { bg = colors.purple, fg = colors.bg },
+  b = { bg = colors.fg_gutter, fg = colors.purple },
 }
+
+onedarkpro.visual = {
+  a = { bg = colors.yellow, fg = colors.bg },
+  b = { bg = colors.fg_gutter, fg = colors.yellow },
+}
+
+onedarkpro.replace = {
+  a = { bg = colors.red, fg = colors.bg },
+  b = { bg = colors.fg_gutter, fg = colors.red },
+}
+
+local inactive_bg = config.options.highlight_inactive_windows and colors.color_column or colors.bg
+onedarkpro.inactive = {
+  a = { bg = inactive_bg, fg = colors.blue },
+  b = { bg = inactive_bg, fg = colors.fg_gutter_inactive, gui = "bold" },
+  c = { bg = config.options.lualine_transparency and colors.none or inactive_bg, fg = colors.fg_gutter_inactive },
+}
+
+return onedarkpro
