@@ -110,7 +110,7 @@ local defaults = {
     vim_dadbod_ui = true,
   },
   options = {
-    cursorline = false, -- Use cursorline highlighting?
+    cursorline = true, -- Use cursorline highlighting?
     transparency = false, -- Use a transparent background?
     terminal_colors = true, -- Use the theme's colors for Neovim's :terminal?
     lualine_transparency = false, -- Center bar transparency?
