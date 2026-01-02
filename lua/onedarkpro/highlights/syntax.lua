@@ -15,7 +15,7 @@ function M.groups(theme)
     Float = { fg = theme.palette.Xfloat }, -- a floating point constant: 2.3e10
     Boolean = { fg = theme.palette.Xboolean }, -- a boolean constant: TRUE, false
 
-    Identifier = { fg = theme.palette. Xvariable, style = config.styles.variables }, -- (preferred) any variable name
+    Identifier = { fg = theme.palette.Xvariable, style = config.styles.variables }, -- (preferred) any variable name
     Function = { fg = theme.palette.Xfunction, style = config.styles.functions }, -- function name (also: methods for classes)
 
     Statement = { fg = theme.palette.Xkeyword }, -- (preferred) any statement
