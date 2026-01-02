@@ -13,6 +13,7 @@ local defaults = {
     onedark_dark = "onedark_dark",
     onelight = "onelight",
     vaporwave = "vaporwave",
+    xlwydark = "xlwydark",
   },
   styles = {
     tags = "NONE", -- Style that is applied to tags
@@ -117,7 +118,7 @@ local defaults = {
   },
 }
 
-local M = { theme = "onedark", config = vim.deepcopy(defaults), is_setup = false }
+local M = { theme = "xlwydark", config = vim.deepcopy(defaults), is_setup = false }
 
 ---Determine the filetypes or plugins that should be loaded
 ---@param files table
