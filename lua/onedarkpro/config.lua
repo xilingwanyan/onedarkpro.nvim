@@ -118,7 +118,7 @@ local defaults = {
   },
 }
 
-local M = { theme = "xlwydark", config = vim.deepcopy(defaults), is_setup = false }
+local M = { theme = "onedark", config = vim.deepcopy(defaults), is_setup = false }
 
 ---Determine the filetypes or plugins that should be loaded
 ---@param files table
