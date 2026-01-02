@@ -38,7 +38,7 @@ function M.groups(theme)
     ["@number.float"] = { link = "Float" }, -- floating-point number literals
 
     -- Types
-    ["@type"] = { link = "Type" }, -- type or class definitions and annotations
+    ["@type"] = { fg = theme.palette.Xfunction, style = config.styles.types }, -- type or class definitions and annotations
     ["@type.builtin"] = { link = "@type" }, -- built-in types
     ["@type.definition"] = { link = "@type" }, -- type definitions (e.g. `typedef` in C)
     ["@type.qualifier"] = { link = "@type" }, -- type qualifiers (e.g. `const`)
