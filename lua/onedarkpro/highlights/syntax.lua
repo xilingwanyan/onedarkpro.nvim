@@ -19,7 +19,7 @@ function M.groups(theme)
     Function = { fg = theme.palette.Xfunction, style = config.styles.functions }, -- function name (also: methods for classes)
 
     Statement = { fg = theme.palette.Xkeyword }, -- (preferred) any statement
-    Conditional = { fg = theme.palette.Xvariable, style = config.styles.conditionals }, --  if, then, else, endif, switch, etc
+    Conditional = { fg = theme.palette.Xkeyword, style = config.styles.conditionals }, --  if, then, else, endif, switch, etc
     Repeat = { fg = theme.palette.Xkeyword }, -- for, do, while, etc
     Label = { fg = theme.palette.Xkeyword }, -- case, default, etc
 
