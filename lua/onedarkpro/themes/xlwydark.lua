@@ -34,8 +34,8 @@ local default_colors = {
   Xvariable = "#e667cb",        -- 变量
   Xfield = "#f0be4b",           -- 字段
   Xborder = "#61afef",          -- 蓝色
+  Xtype = "#B4BEFE",            -- 紫色
   -- Xyellow = "#E5C07B",          -- 黄色
-  -- Xcall = "#B4BEFE",            -- 紫色
 }
 
 ---Colors which are generated depending on the values in the palette

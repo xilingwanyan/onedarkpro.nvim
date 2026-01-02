@@ -38,7 +38,7 @@ function M.groups(theme)
     ["@number.float"] = { link = "Float" }, -- floating-point number literals
 
     -- Types
-    ["@type"] = { fg = theme.palette.Xborder, style = config.styles.types }, -- type or class definitions and annotations
+    ["@type"] = { fg = theme.palette.Xtype, style = config.styles.types }, -- type or class definitions and annotations
     ["@type.builtin"] = { link = "@type" }, -- built-in types
     ["@type.definition"] = { link = "@type" }, -- type definitions (e.g. `typedef` in C)
     ["@type.qualifier"] = { link = "@type" }, -- type qualifiers (e.g. `const`)
@@ -72,7 +72,7 @@ function M.groups(theme)
     -- Punctuation
     ["@punctuation.delimiter"] = { link = "Delimiter" }, -- delimiters (e.g. `;` / `.` / `,`)
     ["@punctuation.bracket"] = { fg = theme.palette.Xbracket }, -- brackets (e.g. `()` / `{}` / `[]`)
-    ["@punctuation.special"] = { fg = theme.palette.Xborder }, -- special symbols (e.g. `{}` in string interpolation)
+    ["@punctuation.special"] = { fg = theme.palette.Xtype }, -- special symbols (e.g. `{}` in string interpolation)
 
     -- Comments
     ["@comment"] = { link = "Comment" }, -- line and block comments
