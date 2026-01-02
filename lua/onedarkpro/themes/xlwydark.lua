@@ -19,7 +19,7 @@ local default_colors = {
   highlight = "#e2be7d",
   comment = "#7f848e",
   none = "NONE",
-  --xlwy colors
+  -- xlwy colors
   Xoperator = "#4FC3F7",        -- 运算符和点
   Xstring = "#8BC34A",          -- 字符串
   Xfloat = "#89C049",           -- 浮点数
