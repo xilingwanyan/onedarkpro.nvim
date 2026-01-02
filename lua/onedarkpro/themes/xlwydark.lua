@@ -29,12 +29,12 @@ local default_colors = {
   Xcomment = "#bdbdbd",         -- 注释
   Xkeyword = "#ff6060",         -- 关键字
   Xannotation = "#afb42b",      -- 注解
-  Xfunction = "#64b5f6",        -- 函数名和类型
+  Xfunction = "#64b5f6",        -- 函数名
   xparameter = "#ba68c8",       -- 参数和属性
   Xvariable = "#e667cb",        -- 变量
   Xfield = "#f0be4b",           -- 字段
   Xborder = "#61afef",          -- 蓝色
-  Xtype = "#B4BEFE",            -- 紫色
+  Xtype = "#B4BEFE",            -- 类型
   -- Xyellow = "#E5C07B",          -- 黄色
 }
 
