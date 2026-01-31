@@ -23,7 +23,7 @@ function M.groups(theme)
     SnacksDashboardSpecial = { fg = theme.palette.Xyellow },
   }
 
-  return highlights + snacksdashboard
+  return vim.tbl_extend("force", highlights, snacksdashboard)
 end
 
 return M
