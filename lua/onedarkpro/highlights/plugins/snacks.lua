@@ -16,7 +16,14 @@ function M.groups(theme)
     highlights["SnacksIndentScope" .. i] = { fg = color }
   end
 
-  return highlights
+  local snacksdashboard = {
+    SnacksDashboardHeader = { fg = theme.palette.Xfunction },
+    SnacksDashboardFooter = { fg = theme.palette.xparameter },
+    SnacksDashboardValue = { fg = theme.palette.Xoperator },
+    SnacksDashboardSpecial = { fg = theme.palette.Xyellow },
+  }
+
+  return highlights + snacksdashboard
 end
 
 return M
