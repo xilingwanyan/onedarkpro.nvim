@@ -3,7 +3,11 @@ local uv = vim.uv or vim.loop
 local M = {
     module = "onedarkpro",
     colorscheme = "vaporwave",
+<<<<<<< HEAD
     themes = { "onedark", "onelight", "onedark_vivid", "onedark_dark", "vaporwave", "xlwydark" },
+=======
+    themes = { "onedark", "onelight", "onedark_vivid", "onedark_dark", "vaporwave" },
+>>>>>>> upstream/main
     opts = {
         caching = false,
         cache_path = vim.fn.expand(vim.fn.stdpath("cache") .. "/onedarkpro_testing"),
@@ -64,7 +68,11 @@ vim.api.nvim_create_autocmd("BufWritePost", {
 
 return {
     {
+<<<<<<< HEAD
         "nvim-mini/mini.hipatterns",
+=======
+        "echasnovski/mini.hipatterns",
+>>>>>>> upstream/main
         opts = function(_, opts)
             local hi = require("mini.hipatterns")
 

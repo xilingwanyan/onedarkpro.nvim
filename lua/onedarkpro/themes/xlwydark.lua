@@ -1,10 +1,10 @@
 local meta = {
-  name = "xlwydark",
+  name = "onedark",
   background = "dark",
 }
 
 local default_colors = {
-  bg = "#1f2329",
+  bg = "#282c34",
   fg = "#abb2bf",
   red = "#e06c75",
   orange = "#d19a66",
@@ -19,23 +19,6 @@ local default_colors = {
   highlight = "#e2be7d",
   comment = "#7f848e",
   none = "NONE",
-  -- xlwy colors
-  Xoperator = "#4fc3f7",        -- 运算符
-  Xstring = "#8bc34a",          -- 字符串
-  Xfloat = "#89c049",           -- 浮点数
-  Xboolean = "#ff6060",         -- Boolean
-  Xinteger = "#8bc34a",         -- 整数
-  Xbracket = "#e8e1dd",         -- 基础符号
-  Xcomment = "#bdbdbd",         -- 注释
-  Xkeyword = "#ff6060",         -- 关键字
-  Xannotation = "#afb42b",      -- 注解
-  Xfunction = "#64b5f6",        -- 函数名
-  xparameter = "#ba68c8",       -- 参数和属性
-  Xvariable = "#e667cb",        -- 变量
-  Xfield = "#f0be4b",           -- 字段
-  Xborder = "#61afef",          -- 蓝色
-  Xtype = "#B4BEFE",            -- 类型
-  -- Xyellow = "#E5C07B",          -- 黄色
 }
 
 ---Colors which are generated depending on the values in the palette
@@ -54,22 +37,17 @@ local function generate(colors)
     float_bg = colors.float_bg or color.darken(colors.bg, 3),
     inlay_hint = colors.inlay_hint or color.darken(colors.gray, 7),
 
-    -- Git colors
-    git_add = colors.git_add or "#109868",
-    git_change = colors.git_change or "#948B60",
-    git_delete = colors.git_delete or "#9a353d",
+    -- Git colors (for sign column)
+    git_add = colors.git_add or color.darken(colors.green, 35),
+    git_change = colors.git_change or color.darken(colors.yellow, 30),
+    git_delete = colors.git_delete or color.darken(colors.red, 35),
 
-    git_hunk_add = colors.git_hunk_add or "#43554d",
-    git_hunk_delete = colors.git_hunk_delete or "#502d30",
-    git_hunk_add_inline = colors.git_hunk_add_inline or "#3f534f",
-    git_hunk_change_inline = colors.git_hunk_change_inline or "#41483d",
-    git_hunk_delete_inline = colors.git_hunk_delete_inline or "#6f2e2d",
-
-    -- Git diff
-    diff_add = colors.diff_add or "#003e4a",
-    diff_change = colors.diff_change or "#1f4662",
-    diff_delete = colors.diff_delete or "#501b20",
-    diff_text = colors.diff_text or "#005869",
+    -- Diff colors (for diff mode backgrounds)
+    diff_add = colors.diff_add or color.blend(colors.bg, colors.green, 0.12),
+    diff_change = colors.diff_change or color.blend(colors.bg, colors.yellow, 0.10),
+    diff_delete = colors.diff_delete or color.blend(colors.bg, colors.red, 0.12),
+    diff_text = colors.diff_text or color.blend(colors.bg, colors.cyan, 0.25),
+    diff_text_delete = colors.diff_text_delete or color.blend(colors.bg, colors.red, 0.25),
 
     -- Lualine colors
     bg_statusline = colors.bg_statusline or color.darken(colors.bg, 2.5),
